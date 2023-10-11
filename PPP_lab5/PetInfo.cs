@@ -10,30 +10,45 @@
         public static readonly int MAX_WEIGHT_IN_GRAMS = 155000;
         public static readonly int MAX_AGE = 69;
 
+        /// <summary>
+        /// Получить изи записать имя питомца. Строка должна быть не пустой.
+        /// </summary>
         public string Name 
         { 
             get => _name; 
             set => _name = !string.IsNullOrEmpty(value) ? value.Trim() : throw new Exception("Строка пуста или равна null."); 
         }
 
+        /// <summary>
+        /// Получить или записать породу питомца. Строка должна быть не пустой.
+        /// </summary>
         public string Breed 
         { 
             get => _breed; 
             set => _breed = !string.IsNullOrEmpty(value) ? value.Trim() : throw new Exception("Строка пуста или равна null."); 
         }
 
+        /// <summary>
+        /// Получить или записать вес питомца в граммах. Вес должен быть больше 0 и меньше 155000.
+        /// </summary>
         public int WeightInGrams 
         { 
             get => _weightInGrams; 
             set => _weightInGrams = value > 0 && value <= MAX_WEIGHT_IN_GRAMS ? value : throw new ArgumentOutOfRangeException(); 
         }
 
+        /// <summary>
+        /// Получить или записаь возраст питомца с момента рождения. Значение дольжно быть больше 0 и меньше 69.
+        /// </summary>
         public int Age 
         { 
             get => _age; 
             set => _age = value > 0 && value <= MAX_AGE ? value : throw new ArgumentOutOfRangeException(); 
         }
 
+        /// <summary>
+        /// Получить или записать раскраску питомца. Строка должна быть не пустой.
+        /// </summary>
         public string Coloring 
         { 
             get => _coloring; 

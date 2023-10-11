@@ -1,6 +1,6 @@
 ﻿namespace PPP_lab5
 {
-    public class Cat : Pets
+    public class Cat : Pet
     {
         private int _lengthOfLongestWhiskerInCentimeters;
         private int _numberOfMiceCaught;
@@ -9,18 +9,28 @@
         public static readonly int MAX_NUMBER_OF_MICE_CAUGHT = 28889;
         public static readonly int MAX_PURRING_FREQUENCY_IN_DAY = 2400;
 
+
+        /// <summary>
+        /// Получить или записать значение длины самого длинного уса кота в сантиметрах. Значение должно быть больше 0 и меньше 49.
+        /// </summary>
         public int LengthOfLongestWhiskerInCentimeters 
         { 
             get => _lengthOfLongestWhiskerInCentimeters; 
             set => _lengthOfLongestWhiskerInCentimeters = value > 0 && value <=MAX_LENGTH_OF_WHISKER_IN_CENTIMETERS ? value : throw new ArgumentOutOfRangeException(); 
         }
 
+        /// <summary>
+        /// Получить или записать количество спойманных котом мышей. Значение должно быть больше 0 и меньше 28889.
+        /// </summary>
         public int NumberOfMiceCaught 
         { 
             get => _numberOfMiceCaught; 
             set => _numberOfMiceCaught = value <0 || value > MAX_NUMBER_OF_MICE_CAUGHT ? throw new ArgumentOutOfRangeException() : value; 
         }
 
+        /// <summary>
+        /// Получить или записать сколько раз кот мурчал за день. Значение должно быть больше 0 и меньше 2400.
+        /// </summary>
         public int PurringFrequencyInDay 
         { 
             get => _purringFrequencyInDay; 

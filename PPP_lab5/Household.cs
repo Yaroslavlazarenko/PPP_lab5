@@ -5,10 +5,14 @@ namespace PPP_lab5
 {
     public class Household
     {
-        private Pets[] _pets;
-        public Pets[] Pets  => _pets;
+        private Pet[] _pets;
+        public Pet[] Pets  => _pets;
 
-        public Household(params Pets[] pets)
+        /// <summary>
+        /// Зоздание массива с питомцами и добавление в него сразу необходимое количество
+        /// </summary>
+        /// <param name="pets"></param>
+        public Household(params Pet[] pets)
         {
             _pets = pets;
         }
@@ -17,7 +21,7 @@ namespace PPP_lab5
         /// Добавление питомца
         /// </summary>
         /// <param name="pet">Новый питомец</param>
-        public void AddPet(Pets pet)
+        public void AddPet(Pet pet)
         {
             Array.Resize(ref _pets, _pets.Length + 1);
             _pets[^1] = pet;
@@ -48,7 +52,7 @@ namespace PPP_lab5
         /// <param name="index">Индекс питомца в домашнем хозяйтсве</param>
         /// <param name="newPetInfo">Новая информация про питомца</param>
         /// <exception cref="IndexOutOfRangeException">Индекс питомца которого следует удалить должен иметься в массиве питомцев</exception>
-        public void EditPet(int index, Pets newPetInfo)
+        public void EditPet(int index, Pet newPetInfo)
         {
             if (index < 0 || index >= _pets.Length)
             {

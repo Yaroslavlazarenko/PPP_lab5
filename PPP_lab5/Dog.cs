@@ -1,6 +1,6 @@
 ﻿namespace PPP_lab5
 {
-    internal class Dog : Pets
+    internal class Dog : Pet
     {
         private int _runningSpeed;
         private int _withersHeightInCentimeters;
@@ -10,18 +10,27 @@
         public static readonly int MAX_WITHERS_HEIGHT_IN_CENTIMETERS = 112;
         public static readonly int MAX_TAIL_LENGTH = 77;
 
+        /// <summary>
+        /// Получить или записать скорость бега собаки. Значение должно быть больше 0 и меньше 67 км/ч.
+        /// </summary>
         public int RunningSpeed 
         { 
             get => _runningSpeed; 
             set => _runningSpeed = value > 0 && value <= MAX_RUNNING_SPEED ? value : throw new ArgumentOutOfRangeException(); 
         }
 
+        /// <summary>
+        /// Получить или записать высоту в холке в сантиметрах. Значение должно быть больше 15 и меньше 112.
+        /// </summary>
         public int WithersHeightInCentimeters 
         { 
             get => _withersHeightInCentimeters; 
             set => _withersHeightInCentimeters = value > MIN_WITHERS_HEIGHT_IN_CENTIMETERS && value <= MAX_WITHERS_HEIGHT_IN_CENTIMETERS ? value : throw new ArgumentOutOfRangeException(); 
         }
 
+        /// <summary>
+        /// Получить или записать длину хвоста в сантиметрах. Значение должно быть от 0 до 77.
+        /// </summary>
         public int TailLengthInCentimeters 
         { 
             get => _tailLengthInCentimeters; 

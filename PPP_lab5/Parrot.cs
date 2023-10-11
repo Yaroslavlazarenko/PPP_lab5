@@ -1,6 +1,6 @@
 ﻿namespace PPP_lab5
 {
-    public class Parrot : Pets
+    public class Parrot : Pet
     {
         private int _beakLengthInCentimeters;
         private int _beakWidthInCentimeters;
@@ -9,18 +9,27 @@
         public static readonly int MAX_BEAK_WIDTH_IN_CENTIMETERS = 13;
         public static readonly int MAX_BEAK_HEIGHT_IN_CENTIMETERS = 25;
 
+        /// <summary>
+        /// Получить или записать значение длины клюва попугая в сантиметрах. Значение должно быть больше 0 и меньше 40.
+        /// </summary>
         public int BeakLengthInCentimeters 
         { 
             get => _beakLengthInCentimeters; 
             set => _beakLengthInCentimeters = value > 0 && value <=MAX_BEAK_LENGTH_IN_CENTIMETERS ? value : throw new ArgumentOutOfRangeException(); 
         }
 
+        /// <summary>
+        /// Получить или записать значение ширины клюва попугая в сантиметрах. Значение должно быть больше 0 и меньше 13.
+        /// </summary>
         public int BeakWidthInCentimeters 
         { 
             get => _beakWidthInCentimeters; 
             set => _beakWidthInCentimeters = value > 0 && value <=MAX_BEAK_WIDTH_IN_CENTIMETERS ? value : throw new ArgumentOutOfRangeException(); 
         }
 
+        /// <summary>
+        /// Получить или записать значение высоты клюва попугая в сантиметрах. Значение должно быть больше 0 и меньше 25.
+        /// </summary>
         public int BeakHeightInCentimeters 
         { 
             get => _beakHeightInCentimeters; 

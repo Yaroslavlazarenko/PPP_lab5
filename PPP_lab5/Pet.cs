@@ -6,9 +6,18 @@
         private string _gender;
 
         /// <summary>
+        /// Получить базовую информацию о питомце.
+        /// </summary>
+        public PetInfo petInfo
+        {
+            get => _petInfo;
+        }
+
+        /// <summary>
         /// Получить или записать гендер. Гендеры бывают разные, их очень много, поэтому строка только не должна быть пустой.
         /// </summary>
-        public string Gender { 
+        public string Gender 
+        { 
             get => _gender; 
             set => _gender = !string.IsNullOrEmpty(value) ? value.Trim() : throw new Exception("Строка пуста или равна null.") ; 
         }
@@ -26,14 +35,6 @@
         {
             _petInfo = new PetInfo(name, breed, weightInGrams, age, coloring);
             Gender = gender;
-        }
-
-        /// <summary>
-        /// Получить базовую информацию о питомце.
-        /// </summary>
-        public PetInfo petInfo
-        {
-            get => _petInfo;
         }
 
         public override string ToString()

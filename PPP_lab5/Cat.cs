@@ -45,10 +45,11 @@
         /// <param name="weightInGrams">Вес кота в граммах. Больше 0 и меньше 155000</param>
         /// <param name="age">Возраст кота. Больше нуля и меньше 69</param>
         /// <param name="coloring">Расцветка кота. Должно быть не пустым</param>
+        /// <param name="gender">Гендер кота. Должно быть не пустым</param>
         /// <param name="lengthOfLongestWhiskerInCentimeters">Длина самого длинного уса в сантиметрах. Больше нуля и меньше 49</param>
         /// <param name="numberOfMiceCaught">Количесто спойманных мышей. От 0 до 28889</param>
         /// <param name="purringFrequencyInDay">Количество раз которое кот мурчал за день. От 0 до 2400</param>
-        public Cat(string name, string breed, int weightInGrams, int age, string coloring, int lengthOfLongestWhiskerInCentimeters, int numberOfMiceCaught, int purringFrequencyInDay) : base(name, breed, weightInGrams, age, coloring)
+        public Cat(string name, string breed, int weightInGrams, int age, string coloring, string gender, int lengthOfLongestWhiskerInCentimeters, int numberOfMiceCaught, int purringFrequencyInDay) : base(name, breed, weightInGrams, age, coloring, gender)
         {
             LengthOfLongestWhiskerInCentimeters = lengthOfLongestWhiskerInCentimeters;
             NumberOfMiceCaught = numberOfMiceCaught;

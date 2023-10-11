@@ -45,10 +45,11 @@
         /// <param name="weightInGrams">Вес собаки в граммах. Больше 0 и меньше 155000</param>
         /// <param name="age">Возраст собаки. Больше нуля и меньше 69</param>
         /// <param name="coloring">Расцветка собаки. Должно быть не пустым</param>
+        /// <param name="gender">Гендер собаки. Должно быть не пустым</param>
         /// <param name="runningSpeed">Скорость бега собаки. Больше нуля и меньше 67 км/ч</param>
         /// <param name="withersHeightInCentimeters">Высота собаки в холке в сантиметрах. Больше 15 и меньше 112</param>
         /// <param name="tailLengthInCentimeters">Длина хвоста в сантиметрах. От 0 до 77</param>
-        public Dog(string name, string breed, int weightInGrams, int age, string coloring, int runningSpeed, int withersHeightInCentimeters, int tailLengthInCentimeters) : base(name, breed, weightInGrams, age, coloring)
+        public Dog(string name, string breed, int weightInGrams, int age, string coloring, string gender, int runningSpeed, int withersHeightInCentimeters, int tailLengthInCentimeters) : base(name, breed, weightInGrams, age, coloring, gender)
         {
             RunningSpeed = runningSpeed;
             WithersHeightInCentimeters = withersHeightInCentimeters;

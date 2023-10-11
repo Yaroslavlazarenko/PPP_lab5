@@ -44,10 +44,11 @@
         /// <param name="weightInGrams">Вес попугая в граммах. Больше 0 и меньше 155000</param>
         /// <param name="age">Возраст попугая. Больше нуля и меньше 69</param>
         /// <param name="coloring">Расцветка попугая. Должно быть не пустым</param>
+        /// <param name="gender">Гендер попугая. Должно быть не пустым</param>
         /// <param name="beakLengthInCentimeters">Длина клюва в сантиметрах. Больше нуля и меньше 40</param>
         /// <param name="beakWidthInCentimeters">Ширина клюва в сантиметрах. Больше нуля и меньше 13</param>
         /// <param name="beakHeightInCentimeters">Высота клюва в сантиметрах. Больше нуля и меньше 25</param>
-        public Parrot(string name, string breed, int weightInGrams, int age, string coloring, int beakLengthInCentimeters, int beakWidthInCentimeters, int beakHeightInCentimeters) : base(name, breed, weightInGrams, age, coloring)
+        public Parrot(string name, string breed, int weightInGrams, int age, string coloring, string gender, int beakLengthInCentimeters, int beakWidthInCentimeters, int beakHeightInCentimeters) : base(name, breed, weightInGrams, age, coloring, gender)
         {
             BeakLengthInCentimeters = beakLengthInCentimeters;
             BeakWidthInCentimeters = beakWidthInCentimeters;

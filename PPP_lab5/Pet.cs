@@ -16,12 +16,12 @@
         /// <summary>
         /// Конструктор класса пета
         /// </summary>
-        /// <param name="name">Имя питомца</param>
-        /// <param name="breed">Порода питомца</param>
-        /// <param name="weightInGrams">Вес питомца в граммах</param>
-        /// <param name="age">Возраст питомца</param>
-        /// <param name="coloring">Расскраска питомца</param>
-        /// <param name="gender">Гендер питомца</param>
+        /// <param name="name">Имя питомца. Должно быть не пустым</param>
+        /// <param name="breed">Порода питомца. Должно быть не пустым</param>
+        /// <param name="weightInGrams">Вес питомца в граммах. Больше 0 и меньше 155000</param>
+        /// <param name="age">Возраст питомца. Больше нуля и меньше 69</param>
+        /// <param name="coloring">Расцветка питомца. Должно быть не пустым</param>
+        /// <param name="gender">Гендер питомца. Должно быть не пустым</param>
         public Pet(string name, string breed, int weightInGrams, int age, string coloring, string gender)
         {
             _petInfo = new PetInfo(name, breed, weightInGrams, age, coloring);
